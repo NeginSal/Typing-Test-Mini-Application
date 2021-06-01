@@ -11,5 +11,8 @@ button.addEventListener("click",function(){
 
 })
 function playGame(){
+    let randomNum =Math.floor(Math.random()*wording.length);
+    message.innerText= wording[randomNum];
+    console.log(randomNum);
 
 }
