@@ -9,8 +9,19 @@ button.addEventListener("click",function(){
         playText.disabled =false;
         playGame();
     }
-
-})
+    else if(this.innerText == "Done"){
+        playText.disabled =true;
+        button.innerText ="Start";
+        endPlay();
+        }
+    })
+function endPlay(){
+    let date = new Date();
+    endTime = date.getTime();
+    let totalTime =((endTime-startTime)/1000);
+    console.log(totalTime);
+    let str =playText.value;
+}
 function playGame(){
     let randomNum =Math.floor(Math.random()*wording.length);
     message.innerText= wording[randomNum];
